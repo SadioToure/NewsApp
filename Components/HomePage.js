@@ -4,10 +4,10 @@ import { View, Text, Button, StyleSheet, ImageBackground } from 'react-native';
 const HomePage = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <ImageBackground source={{uri: ''}} style={styles.container}>
+      {/*<ImageBackground source={{uri: ''}} style={styles.container}>*/}
         <Text style={styles.title}>Bienvenue !</Text>
         <Text style={styles.text}>Toutes les dernières actualités au même endroit !</Text>
-      </ImageBackground>
+      {/*</ImageBackground>*/}
     </View>
   );
 };

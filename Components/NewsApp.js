@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, StyleSheet, FlatList, TouchableOpacity, Linking, TextInput } from 'react-native';
+import { View, Text, StyleSheet, FlatList, TouchableOpacity, Linking, Image, TextInput } from 'react-native';
 
 const API_KEY = '26c3bbd4404040c5986c25b5cf5e1e58';
 
@@ -7,7 +7,7 @@ const NewsApp = () => {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
-    fetch(`https://newsapi.org/v2/top-headlines?country=fr&apiKey=${API_KEY}`)
+    fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}`)
       .then((response) => response.json())
       .then((data) => setArticles(data.articles))
       .catch((error) => console.error(error));
@@ -19,6 +19,10 @@ const NewsApp = () => {
 
   const renderItem = ({ item }) => (
     <TouchableOpacity style={styles.item} onPress={() => openArticle(item.url)}>
+      <Image 
+        style={styles.image}
+        source={{ uri: item.urlToImage }} 
+      />
       <Text style={styles.title}>{item.title}</Text>
       <Text style={styles.time}>{new Date(item.publishedAt).toLocaleString()}</Text>
       <Text style={styles.description}>{item.description}</Text>
@@ -60,6 +64,10 @@ const styles = StyleSheet.create({
     fontSize: 12,
     marginTop: 10,
     color: 'gray',
+  },
+  image: {
+    width: '100%',
+    height: 200,
   },
 });
 

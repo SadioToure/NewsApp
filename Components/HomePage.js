@@ -6,7 +6,7 @@ const HomePage = ({ navigation }) => {
     <View style={styles.container}>
       <ImageBackground source={{uri: ''}} style={styles.container}>
         <Text style={styles.title}>Bienvenue !</Text>
-        <Text style={styles.text}>Toutes les dernières actualités au même endroits !</Text>
+        <Text style={styles.text}>Toutes les dernières actualités au même endroit !</Text>
       </ImageBackground>
     </View>
   );

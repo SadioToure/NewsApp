@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, FlatList, TouchableOpacity, Linking, TextInput } from 'react-native';
+import { Card } from 'react-native-elements';
 
 const API_KEY = '26c3bbd4404040c5986c25b5cf5e1e58';
 
@@ -18,11 +19,13 @@ const NewsApp = () => {
   };
 
   const renderItem = ({ item }) => (
-    <TouchableOpacity style={styles.item} onPress={() => openArticle(item.url)}>
-      <Text style={styles.title}>{item.title}</Text>
-      <Text style={styles.time}>{new Date(item.publishedAt).toLocaleString()}</Text>
-      <Text style={styles.description}>{item.description}</Text>
-    </TouchableOpacity>
+    <Card>
+      <TouchableOpacity style={styles.item} onPress={() => openArticle(item.url)}>
+        <Text style={styles.title}>{item.title}</Text>
+        <Text style={styles.time}>{new Date(item.publishedAt).toLocaleString()}</Text>
+        <Text style={styles.description}>{item.description}</Text>
+      </TouchableOpacity>
+    </Card>
   );
 
   return (

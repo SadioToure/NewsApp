@@ -1,13 +1,11 @@
 import React from 'react';
-import { View, Text, Button, StyleSheet, ImageBackground } from 'react-native';
+import { View, Text, Button, StyleSheet } from 'react-native';
 
 const HomePage = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      {/*<ImageBackground source={{uri: ''}} style={styles.container}>*/}
         <Text style={styles.title}>Bienvenue !</Text>
         <Text style={styles.text}>Toutes les dernières actualités au même endroit !</Text>
-      {/*</ImageBackground>*/}
     </View>
   );
 };
@@ -30,9 +28,6 @@ const styles = StyleSheet.create({
   text: {
     textAlign: 'center',
     color: 'black',
-  },
-  ImageBackground:{
-  
   },
 });
 

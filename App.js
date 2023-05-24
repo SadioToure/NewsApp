@@ -1,8 +1,8 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import HomePage from './Components/HomePage';
-import NewsApp from './Components/NewsApp';
+import HomePage from './Components/HomePage/HomePage';
+import NewsApp from './Components/NewsApp/NewsApp';
 import Ionicons from 'react-native-vector-icons/Ionicons'; 
 
 const Tab = createBottomTabNavigator();

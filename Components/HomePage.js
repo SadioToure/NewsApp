@@ -4,7 +4,6 @@ import { View, Text, StyleSheet } from 'react-native';
 import Carousel from 'react-native-snap-carousel';
 
 const API_KEY = '26c3bbd4404040c5986c25b5cf5e1e58';
-
 const HomePage = ({ navigation }) => {
   const [carouselData, setCarouselData] = useState([]);
 
